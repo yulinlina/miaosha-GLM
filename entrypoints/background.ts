@@ -37,7 +37,7 @@ async function showFlashNotification(min: number) {
   try {
     await chrome.notifications.create(`flash-${min}`, {
       type: 'basic',
-      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
+      iconUrl: chrome.runtime.getURL('icons/128.png'),
       title,
       message,
       priority: 2,
@@ -50,7 +50,7 @@ async function showFlashNotification(min: number) {
     // Fallback to a smaller icon + no buttons if the platform rejects image/button payload.
     await chrome.notifications.create(`flash-${min}`, {
       type: 'basic',
-      iconUrl: chrome.runtime.getURL('icons/icon16.png'),
+      iconUrl: chrome.runtime.getURL('icons/16.png'),
       title,
       message,
       priority: 2,

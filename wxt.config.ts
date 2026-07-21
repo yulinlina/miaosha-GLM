@@ -24,6 +24,20 @@ export default defineConfig({
     description: '多平台 Coding Plan 秒杀助手浏览器扩展（智谱 / 火山引擎）',
     permissions: ['storage', 'tabs', 'scripting', 'alarms', 'notifications'],
     host_permissions: ['*://*.bigmodel.cn/*', '*://*.volcengine.com/*'],
+    icons: {
+      '16': 'icons/16.png',
+      '48': 'icons/48.png',
+      '128': 'icons/128.png',
+    },
+    action: {
+      default_title: 'Coding Plan 秒杀助手',
+      default_popup: 'popup.html',
+      default_icon: {
+        '16': 'icons/16.png',
+        '48': 'icons/48.png',
+        '128': 'icons/128.png',
+      },
+    },
     web_accessible_resources: [
       {
         resources: ['bm-early.js', 'bm-main.js'],
